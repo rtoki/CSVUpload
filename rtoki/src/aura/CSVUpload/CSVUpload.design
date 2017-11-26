@@ -1,0 +1,8 @@
+<design:component >
+    <design:attribute name="target" label="Target object name" description="Target object name (i.e. Account)" />
+    <design:attribute name="insert" label="Show Insert button" description="Show Insert button" />
+    <design:attribute name="update" label="Show Update button" description="Show Update button" />
+    <design:attribute name="delete" label="Show Delete button" description="Show Delete button" />
+    <design:attribute name="allOrNone" label="All Or None" description="Whether the operation allows partial success. If you specify false for this parameter and a record fails, the remainder of the DML operation can still succeed. (default:false)" />
+    <design:attribute name="verbose" label="Verbose" description="Display results in datatable" />
+</design:component>
