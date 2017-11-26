@@ -1,0 +1,27 @@
+<aura:component controller="CSVUploadController"  implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="target" type="String" default="Account" access="global"/> 
+    <aura:attribute name="insert" type="Boolean" default="true" access="global"/> 
+    <aura:attribute name="update" type="Boolean" default="true" access="global"/> 
+    <aura:attribute name="delete" type="Boolean" default="true" access="global"/> 
+    <aura:attribute name="allOrNone" type="Boolean" default="false" access="global" /> 
+    <aura:attribute name="verbose" type="Boolean" default="false" access="global" /> 
+
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    
+    <lightning:layout horizontalAlign="spread" verticalAlign="center"  multipleRows="true">
+        <lightning:layoutItem flexibility="auto" size="12">
+            <input type="file" class="file" aura:id="file" accept=".csv"  multiple="false"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem flexibility="auto" size="12">
+            <aura:if isTrue="{!v.insert}"><lightning:button variant="brand" label="insert" onclick="{!c.insert }" /></aura:if>
+            <aura:if isTrue="{!v.update}"><lightning:button variant="brand" label="update" onclick="{!c.update }" /></aura:if>
+            <aura:if isTrue="{!v.delete}"><lightning:button variant="brand" label="delete" onclick="{!c.delete }" /></aura:if>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:datatable data="{!v.mydata}" columns="{!v.mycolumns}" keyField="no" hideCheckboxColumn="true"/>
+
+    <div class="spinner">
+        <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+    </div>    
+</aura:component>
