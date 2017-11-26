@@ -14,7 +14,7 @@ Enable Lightning Experience and prepare my domain.
 ### Installing
 
 Install from AppExchange link below.
-https://login.salesforce.com/packaging/installPackage.apexp?p0=04t100000007Xlz&isdtp=p1
+* https://login.salesforce.com/packaging/installPackage.apexp?p0=04t100000007Xlz&isdtp=p1
 
 CSVUpload component has the following attributes.
 ```
