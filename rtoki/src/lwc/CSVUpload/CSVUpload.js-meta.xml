@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="CSVUpload">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>CSVUpload</masterLabel>
+    <description>CSVUpload component.</description>
+    <targets>
+      <target>lightning__AppPage</target>
+      <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+      <targetConfig targets="lightning__AppPage, lightning__HomePage">
+          <property name="target" type="String" default="Account" required="true"/>
+          <property name="insertRecord" type="Boolean" default="true"/>
+          <property name="updateRecord" type="Boolean" default="true"/>
+          <property name="deleteRecord" type="Boolean" default="true"/>
+          <property name="allOrNone" type="Boolean" default="false"/>
+          <property name="verbose" type="Boolean" default="true"/>
+      </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
