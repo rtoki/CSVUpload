@@ -19,10 +19,10 @@ Lightning Component version:
 Install from AppExchange link below.
 * https://login.salesforce.com/packaging/installPackage.apexp?p0=04t100000007Xlz&isdtp=p1
 
-LWC version
-clone and push via VSCode.
+LWC version: 
+Clone and push via VSCode.
 
-### Usage
+## Usage
 Create a lightning page via AppBuilder and assign attributes below:
 ```
 target - Target object name (ex. Account)
